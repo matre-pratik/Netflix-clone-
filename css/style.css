@@ -139,7 +139,7 @@ nav .logo img {
   background-size: cover;
 }
 .gradient {
-  height: 3px;
+  height: 8px;
   width: 100%;
   background-image: linear-gradient(
     to right,
@@ -149,8 +149,10 @@ nav .logo img {
     rgba(184, 40, 105, 1),
     rgba(33, 13, 22, 1) 84%
   );
-  border-top-left-radius: 100% 20px;
-  border-top-right-radius: 100% 25px;
+  border-top: 4px solid;
+  border-radius: 50%;
+  /* border-top-left-radius: 100% 20px;
+  border-top-right-radius: 100% 25px; */
   margin: -2px 0px 20px;
 }
 .trends {
@@ -162,7 +164,23 @@ nav .logo img {
   color: white;
   margin: 20px;
 }
-
+.trend-item {
+  display: flex;
+}
+.trend-item .button {
+  height: 250px;
+  display: flex;
+  align-items: center;
+}
+.trend-item .button button {
+  height: 100px;
+  width: 20px;
+  margin: 10px;
+  background-color: #2a2828;
+  color: white;
+  border: 1px solid #605c5c;
+  border-radius: 12px;
+}
 .trend-list {
   display: flex;
   overflow-x: auto;
@@ -174,9 +192,12 @@ nav .logo img {
 .trend-list::-webkit-scrollbar {
   display: none;
 }
+
 .trend-list .cards {
   position: relative;
-  flex: 0 0 auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
   width: 200px;
   height: 250px;
   margin: 10px;
@@ -213,8 +234,8 @@ nav .logo img {
 
 .about .heading {
   color: white;
-  margin: 20px;
-  width: 100%;
+  margin: 20px auto;
+  width: 90%;
   text-align: left;
 }
 .about .content {
